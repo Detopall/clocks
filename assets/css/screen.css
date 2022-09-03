@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+	background-color: salmon;
+	overflow: hidden;
+}
+
+main {
+	height: 60vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: row-reverse;
+	color: white;
+}
+
+header {
+	font-size: 5rem;
+	text-align: center;
+	margin-top: 9rem;
+	font-family: 'Bebas Neue';
+	text-decoration: underline;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+/* ANALOG */
+
+.analog {
+	background-color: white;
+	height: 18.75rem;
+	width: 18.75rem;
+	border-radius: 9.375rem;
+	border: solid 0.4rem yellow;
+	font-size: 2rem;
+	color: black;
+	font-family: 'Bebas Neue';
+	position: relative;
+	color: white;
+	text-shadow: 1px 1px #FF0000;
+}
+
+.analog .number, .analog .stripe {
+	position: absolute;
+	--rotation: 0;
+	text-align: center;
+	transform: rotate(var(--rotation));
+}
+
+.analog .number {
+	width: 100%;
+	height: 90%;
+	margin-top: 1rem;
+}
+
+.analog .stripe {
+	width: 100%;
+	height: 100%;
+}
+
+.analog .number1, .analog .stripe1 { --rotation: 30deg; }
+.analog .number2, .analog .stripe2 { --rotation: 60deg; }
+.analog .number3, .analog .stripe3 { --rotation: 90deg; }
+.analog .number4, .analog .stripe4 { --rotation: 120deg; }
+.analog .number5, .analog .stripe5 { --rotation: 150deg; }
+.analog .number6, .analog .stripe6 { --rotation: 180deg; }
+.analog .number7, .analog .stripe7 { --rotation: 210deg; }
+.analog .number8, .analog .stripe8 { --rotation: 240deg; }
+.analog .number9, .analog .stripe9 { --rotation: 270deg; }
+.analog .number10, .analog .stripe10 { --rotation: 300deg; }
+.analog .number11, .analog .stripe11 { --rotation: 330deg; }
+
+#seconds-hand {
+	height: 9.2rem;
+	width: 0.2rem;
+	background-color: red;
+	right: 9rem;
+}
+
+#minutes-hand {
+	height: 8rem;
+	width: 0.5rem;
+	background-color: black;
+	right: 8.7rem;
+	bottom: 9.4rem;
+}
+
+#hours-hand {
+	height: 5rem;
+	width: 0.4rem;
+	background-color: black;
+	right: 8.9rem;
+	top: 4rem;
+}
+
+#hours-hand, #seconds-hand, #minutes-hand {
+	position: absolute;
+	transform-origin: 0 100%;
+}
+
+/* DIGITAL */
+
+.digital {
+	display: flex;
+	font-family: 'Bebas Neue';
+	justify-content: space-between;
+	flex-direction: row;
+	background-color: black;
+	height: 11rem;
+	width: 20rem;
+	border-radius: 2rem;
+	border: solid white 1rem;	
+	font-size: 5rem;
+}
+
+.digital > div {
+	margin-top: 2.4rem;
+}
